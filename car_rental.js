@@ -21,9 +21,9 @@ var Car = function (carInfo) {
   };
   this.reserve = function(customer, rentalDuration){
     if (this.available === true) {
-      this.available === false;
-      this.customer === customer;
-      this.rentalDuration === rentalDuration;
+      this.available = false;
+      this.customer = customer;
+      this.rentalDuration = rentalDuration;
       return true;
     } else {
       return false;
@@ -34,9 +34,9 @@ var Car = function (carInfo) {
     if (this.available === true) {
       return "Sorry, this car have already bee returned.";
     } else {
-      car.available === true;
-      car.customer === {};
-      car.rentalDuration === {};
+      car.available = true;
+      car.customer = {};
+      car.rentalDuration = {};
     }
   };
 };
@@ -134,8 +134,8 @@ var Vendor = function(name) {
   this.returnCar = function (customerID){
       var cus = this.getCustomer(customerID)
       if (cus) {
-          this.cus.carRented.return() 
-          this.cus.carRented = {};
+          cus.carRented.return(); 
+          cus.carRented = {};
           console.log("Thank you for using our service");
         } else {
           console.log("Please provide a valid customerID");
